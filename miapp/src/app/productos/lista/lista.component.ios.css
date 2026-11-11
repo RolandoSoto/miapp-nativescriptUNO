@@ -1,0 +1,5 @@
+/* SOLO iOS: sobrecarga de lista.component.css */
+.item { background-color: #E3F2FD; margin: 3; border-radius: 10; }
+.item-nombre { color: #1565C0; font-size: 17; }
+.item-precio { color: #0D47A1; font-weight: bold; }
+.mensaje { color: #1565C0; }

@@ -1,0 +1,27 @@
+<ActionBar class="action-bar">
+  <NavigationButton visibility="hidden"></NavigationButton>
+  <GridLayout columns="50, *">
+    <Label class="action-bar-title" text="Productos" colSpan="2"></Label>
+    <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+  </GridLayout>
+</ActionBar>
+
+<StackLayout class="contenedor">
+  <Image src="res://icono_productos" class="logo" width="80" height="80"></Image>
+  <Label [text]="mensajePlataforma" class="mensaje" textWrap="true"></Label>
+
+  <ListView [items]="productos" class="lista">
+    <ng-template let-producto="item">
+      <GridLayout columns="*, auto" class="item" (tap)="verDetalle(producto)">
+        <Label col="0" [text]="producto.nombre" class="item-nombre"></Label>
+        <Label col="1" [text]="'$' + producto.precio" class="item-precio"></Label>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+
+  <!-- Uso explícito de *ngFor -->
+  <Label text="Etiquetas disponibles:" class="subtitulo"></Label>
+  <StackLayout>
+    <Label *ngFor="let p of productos" [text]="'• ' + p.nombre" class="etiqueta"></Label>
+  </StackLayout>
+</StackLayout>

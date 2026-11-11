@@ -1,0 +1,9 @@
+<ActionBar title="Detalle del producto" class="action-bar">
+  <NavigationButton text="Atrás" android.systemIcon="ic_menu_back" (tap)="volver()"></NavigationButton>
+</ActionBar>
+
+<StackLayout class="detalle" *ngIf="producto">
+  <Label [text]="producto.nombre" class="detalle-titulo"></Label>
+  <Label [text]="'Precio: $' + producto.precio" class="detalle-precio"></Label>
+  <Label [text]="producto.descripcion" textWrap="true"></Label>
+</StackLayout>

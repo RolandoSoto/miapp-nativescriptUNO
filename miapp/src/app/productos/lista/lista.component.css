@@ -1,0 +1,8 @@
+/* Estilos comunes (se usan si no existe archivo específico de plataforma) */
+.contenedor { padding: 10; }
+.mensaje { font-size: 14; text-align: center; margin: 5; }
+.subtitulo { font-size: 16; font-weight: bold; margin-top: 10; }
+.item { padding: 12; }
+.item-nombre { font-size: 18; }
+.item-precio { font-size: 18; }
+.etiqueta { font-size: 14; }
